@@ -1,0 +1,546 @@
+
+:root {
+    --bg-crema: #F3F0E6;
+    --accent-red: #8a0303;
+    --text-white: #ffffff;
+    --font-headers: 'Cinzel', serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-crema);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(243, 240, 230, 0.6); /* make more transparent so bg shows through */
+}
+
+/* ensure page content clears the fixed navigation bar */
+body {
+    background-color: var(--bg-crema);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    padding-top: 70px; /* should match or slightly exceed nav height */
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-family: var(--font-headers);
+    font-weight: 900;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.logo-text span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--accent-red);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111;
+    font-family: var(--font-headers);
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent-red); }
+
+.nav-icons {
+    display: flex;
+    gap: 20px;
+}
+
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero-image-container {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8) contrast(1.1); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    color: var(--text-white);
+}
+
+.hero h1 {
+    font-family: var(--font-headers);
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.7); 
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    margin: 20px 0 40px;
+    font-style: italic;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+
+.btn-berserk {
+    display: inline-block;
+    padding: 15px 35px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 2px solid var(--accent-red);
+    text-decoration: none;
+    font-family: var(--font-headers);
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: 0.4s;
+    box-shadow: 0 0 15px rgba(138, 3, 3, 0.5); 
+}
+
+.btn-berserk:hover {
+    background: var(--accent-red);
+    box-shadow: 0 0 25px var(--accent-red);
+    transform: scale(1.05);
+}
+
+
+.page-about .hero-about {
+
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('fondo-berserk.png') center/cover no-repeat;
+    
+  
+    min-height: 70vh;
+    padding-top: 100px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page-about .hero-content h1 {
+    color: white;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8); 
+}
+.page-about .hero-content {
+    text-align: center;
+    padding: 0 20px;
+    z-index: 1; 
+}
+
+
+.page-about {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+
+.page-about h2 {
+    font-family: 'Cinzel', serif;
+    color: #c5a059; 
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.page-about .about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+
+.page-about .specialties {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.page-about .spec-card {
+    background: #151515;
+    padding: 30px;
+    border: 1px solid #333;
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.page-about .spec-card:hover {
+    border-color: #c5a059;
+    transform: translateY(-5px);
+}
+
+.page-about .spec-card i {
+    font-size: 2.5rem;
+    color: #c5a059;
+    margin-bottom: 15px;
+}
+
+
+.mantenimiento {
+    width: 100%;             
+    min-height: 80vh;       
+    padding-top: 140px;     
+    padding-bottom: 50px;
+    
+    display: flex;           
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: flex-start; 
+    
+    background-color: #f5f5dc; 
+    box-sizing: border-box;  
+    margin: 0;              
+}
+
+.mantenimiento h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 20px;
+    width: 90%;             
+    text-align: center;
+}
+
+.mantenimiento p {
+    font-family: 'Lato', sans-serif;
+    max-width: 700px;        
+    width: 90%;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;      
+}
+
+/* contact form styles */
+.contact-form {
+    position: relative;
+    z-index: 10; /* ensure form sits well above background images */
+    max-width: 500px;
+    margin: 20px auto 60px; /* small top margin since body padding handles most spacing */
+    padding: 20px;
+    background: var(--bg-crema);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.contact-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: var(--font-headers);
+}
+.contact-form p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.contact-form input {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.contact-form input:focus {
+    outline: none;
+    border-color: var(--accent-red);
+}
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: var(--accent-red);
+    color: var(--text-white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}.btn-submit:hover {
+    background: #a00505;
+}
+
+/* carousel styles added by user */
+.carousel-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Esconde las imágenes que salen de la pantalla */
+  background: #000;
+  z-index: -1; /* sit behind all other content */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* center track vertically */
+}
+
+.carousel-track {
+  display: flex;
+  /* width removed so flex will size based on content */
+  animation: scroll 40s linear infinite;
+}
+
+.carousel-track img {
+  width: 300px; /* Ajusta el tamaño según tu diseño */
+  height: 500px;
+  object-fit: cover;
+  margin: 0 10px;
+  border-radius: 15px;
+}
+
+/* La animación que crea el movimiento */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Move by half of the track width (since we duplicated the full set) */
+    transform: translateX(-50%);
+  }
+}
+
+/* Pausar cuando el usuario pasa el mouse (opcional) */
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+/* collection page styles */
+.collections {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f0eee4; /* color crema */
+}
+.collections h1 {
+    font-family: var(--font-headers);
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    text-align: center;
+}
+.collection-grid {
+    display: flex;
+    flex-direction: column; /* stack items vertically */
+    gap: 0; /* remove gap */
+    align-items: stretch; /* stretch to full width */
+}
+.collection-item {
+    background: transparent;
+    border-radius: 0;
+    overflow: visible; /* Allow overflow for carousel */
+    width: 100%;
+    box-shadow: none;
+    display: block;
+    height: auto;
+    margin-bottom: 80px;
+    position: relative;
+    text-align: center;
+}
+.collection-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.collection-item h2 {
+    font-family: var(--font-headers);
+    margin: 0 auto 20px auto;
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+}
+.collection-item p {
+    padding: 0 20px 40px 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: center;
+    flex-grow: unset;
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.collection-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 0;
+}
+.collection-images img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* carousel of all tatuaje images inside collection cards */
+.tatuaje-carousel {
+    width: 100%;
+    overflow: auto;
+    margin: 40px 0;
+    background: #f5f5f5;
+    padding: 20px 0;
+    display: block;
+}
+.tatuaje-track {
+    display: flex;
+    gap: 15px;
+    animation: slide 40s linear infinite;
+    padding-left: 20px;
+    white-space: nowrap;
+}
+.tatuaje-track img {
+    width: 250px !important;
+    height: 350px !important;
+    object-fit: cover;
+    border-radius: 5px;
+    flex-shrink: 0;
+    display: inline-block !important;
+}
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 8 - 15px * 8)); }
+}
+.tatuaje-carousel:hover .tatuaje-track {
+    animation-play-state: paused;
+}
+.collection-container {
+    padding: 40px 5%;
+    background-color: #f0eee4;
+}
+.collection-header{
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.carrusel-scroll { 
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 0;
+}
+.card{flex : 0 0 280px; 
+    gap:20px;
+    overflow-x:auto;
+    padding-bottom: 15px;
+    scroll-snap-type: x mandatory;
+}
+.card img { 
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+   
+}
+.card-info{
+    margin-top: 15px ; font-family: 'Cinzel', serif;
+}
+
+.carrusel-scroll::-webkit-scrollbar {
+    height: 4px;
+}
+.carrusel-scroll::-webkit-scrollbar-thumb {
+    background: #000;
+}    
+.card-info span {
+    color: var(--accent-red);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+.card-info p {
+    color: #f00;
+    font-size: 0.9rem;
+    text-shadow: #ccc 1px 1px 2px;
+}
+.collection-card {
+    background-color: #ffffff;
+    border: 2px solid var(--accent-red);
+    border-radius: 15px;
+    padding:30px;
+    margin:20px auto 60px;
+    max-width:95%;
+    box-shadow:0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.collection-tittle{ 
+    font-family: var(--font-headers);
+    font-size: 2.2rem;
+    color: #111;
+    margin-bottom:10px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.collection-desc{
+    font-family: var(--font-body);
+    color: #555;
+    margin-bottom:30px;
+    font-style:italic;
+}

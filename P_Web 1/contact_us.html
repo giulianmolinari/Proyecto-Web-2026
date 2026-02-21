@@ -1,0 +1,77 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | Berserk Bloom</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <nav>
+        <div class="logo-container">
+            <img src="logo-berserk.png" class="nav-logo-img" alt="Logo">
+            <div class="logo-text">Berserk <span>Bloom</span></div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="collection.html">COLECCIONES</a></li>
+            <li><a href="eventos.html">EVENTOS</a></li>
+            <li><a href="about-us.html">SOBRE NOSOTROS</a></li>
+            <li><a href="contact_us.html">CONTACTO</a></li>
+        </ul>
+
+        <div class="nav-icons">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-regular fa-user"></i>
+        </div>
+    </nav>
+
+    <!-- carousel section using user-provided CSS -->
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <img src="tatuaje1.jpg" alt="">
+            <img src="tatuaje2.jpg" alt="">
+            <img src="tatuaje3.jpg" alt="">
+            <img src="tatuaje4.jpg" alt="">
+            <img src="tatuaje5.jpg" alt="">
+            <img src="tatuaje6.jpg" alt="">
+            <img src="tatuaje7.jpg" alt="">
+            <!-- duplicate full set to create endless loop -->
+            <img src="tatuaje1.jpg" alt="">
+            <img src="tatuaje2.jpg" alt="">
+            <img src="tatuaje3.jpg" alt="">
+            <img src="tatuaje4.jpg" alt="">
+            <img src="tatuaje5.jpg" alt="">
+            <img src="tatuaje6.jpg" alt="">
+            <img src="tatuaje7.jpg" alt="">
+        </div>
+    </div>
+    <main class="contact-form">
+        <h1>Contacto</h1>
+        <p>Por favor completa el siguiente formulario para enviarnos tus consultas.</p>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="form-group">
+                <label for="numero">Número:</label>
+                <input type="tel" id="numero" name="numero" required>
+            </div>
+            <div class="form-group">
+                <label for="distrito">Distrito:</label>
+                <input type="text" id="distrito" name="distrito" required>
+            </div>
+            <button type="submit" class="btn-submit">Enviar consulta</button>
+        </form>
+    </main>
